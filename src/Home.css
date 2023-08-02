@@ -1,0 +1,11 @@
+.page-title{
+        padding: 30px 10px 10px;
+        background: #eee;
+    text-align: center;
+    color: #333;
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+.fake-header{
+            height: 110px;
+    }

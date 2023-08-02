@@ -1,0 +1,158 @@
+.gray-back {
+    padding: 20px 0;
+}
+@media (min-width: 992px){
+ .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}}
+@media (min-width: 768px){
+ .container-md, .container-sm {
+    max-width: 720px;
+}}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 992px){
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}}
+
+h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+.list-group {
+    margin-top: 20px;
+}
+.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+}
+.list-group-item.active {
+    background-color: red !important;
+    color: white !important;
+    border-color: red;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item+.list-group-item {
+    border-top-width: 0;
+}
+.list-group-item-action {
+    width: 100%;
+    color: #495057;
+    text-align: inherit;
+}
+.list-group-item-action:focus, .list-group-item-action:hover {
+    z-index: 1;
+    color: #495057;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+@media (min-width: 992px){
+.col-lg-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}}
+.sub-head {
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+}
+.box-111 {
+    box-shadow: 0 10px 10px #eee;
+    padding: 5px 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.2s ease all;
+}
+.Emaillist {
+    background-color: #eee;
+    margin: -6px -30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 7px 39px;
+}
+.box-111 ul {
+    padding-top: 20px;
+}
+.setting-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.setting-list li:first-child {
+    width: 200px;
+}
+.setting-list li {
+    padding: 5px 10px;
+}
+label {
+    margin-top: 1rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.setting-list li:nth-child(2) {
+    width: 400px;
+    font-weight: 600;
+}
+.setting-list li {
+    padding: 5px 10px;
+}
+/* password */
+
+.Passwordlist {
+    background-color: #eee;
+    margin: -6px -30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 7px 39px;
+}
+.setting-list li:nth-child(2) {
+    margin-top: 12px;
+    width: 400px;
+    font-weight: 600;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+@media (max-width: 912px){
+#whocan {
+    padding-top: 25px;
+}}
+@media (max-width: 414px){
+#setting-lista li:first-child {
+    width: 200px;
+}}
+@media (max-width: 393px){
+#setting-lista li:nth-child(2) {
+    margin-left: -165px;
+}}
+@media (max-width: 414px){
+#setting-lista li:nth-child(2) {
+    margin-top: 40px;
+    margin-left: -180px;
+    width: 300px !important;
+}}

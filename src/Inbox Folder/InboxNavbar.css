@@ -1,0 +1,44 @@
+.top-bar {
+    width: 100%;
+    height: 9vh;
+    background-image: linear-gradient(-111deg, rgb(109, 36, 81) 5%, rgb(54 114 149) 98%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    z-index: 500;
+}
+.top-bar-left {
+    display: flex;
+    align-items: center;
+}
+.top-bar-email, .top-bar-contact, .top-bar-skype {
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+.top-bar-email a, .top-bar-contact a, .top-bar-skype a {
+    color: #ffffff;
+    letter-spacing: .5px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.top-bar-contact i{
+    color: white;
+}
+.top-bar-email i{
+    color: white;
+}
+.top-bar-email i, .top-bar-contact i, .top-bar-skype i {
+    color: #ffffff;
+    padding-top: 3px;
+    margin-right: 4px;
+    transition: all 0.5s ease;
+}
+.top-bar-right a {
+    color: white;
+    padding: 5px;
+}
+    /* .top-bar-email a {
+        font-size: 14px;
+    } */

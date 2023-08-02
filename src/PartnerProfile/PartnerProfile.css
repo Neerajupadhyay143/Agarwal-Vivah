@@ -1,0 +1,164 @@
+.gray-back {
+       
+    padding: 20px 0;
+}
+#yourpartner h2 {
+ 
+    font-size: 23px;
+    background-color: #f0f0f0;
+    width: 1114px;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 8px;
+    margin-left: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.ageeepatr {
+    background-color: white;
+    box-shadow: 8px 8px 8px #eee;
+    padding: 18px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+}
+h3{font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.ageerange {
+    border-bottom: 1px solid #cdc9c9;
+    padding: 10px 0px;
+   
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.d-flex {
+ 
+    display: flex!important;
+    transition: 100ms;
+}
+.d-flex:hover{
+    background-color: #dbdbdb;
+}
+.maritalss {
+    width: 470px;
+}
+.ageerange a {
+    color: black;
+    text-decoration: none;
+}
+.maritalss a i {
+    width: 30px;
+    height: 30px;
+    background-color: #dbdbdb;
+    color: #686868;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 20px;
+}
+.openpartnerr a {
+    font-weight: 600;
+}
+.qualifica {
+    width: 470px;
+}
+.qualifica a i {
+    width: 30px;
+    height: 30px;
+    background-color: #fdabb7;
+    color: #686868;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 20px;
+}
+.createdbypro {
+    width: 470px;
+}
+.createdbypro a i {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: #686868;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 20px;
+}
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+} */
+@media (max-width: 540px){
+.openpartnerr a {
+    padding-left: 45px;
+}}
+
+@media (max-width:540px){
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+} 
+@media (max-width:540px){
+    #yourpartner h2{
+        width: 345px;
+    }
+    
+}
+@media (max-width:540px){
+    .maritalss {
+    width: 270px;
+}
+}
+@media (max-width: 540px){
+.incameanual {
+    display: block !important;
+}}
+@media (max-width: 800x){
+.incameanual {
+    display: block !important;
+}}
+/* @media (max-width: 600px){
+.incameanual {
+    display: block !important;
+}} */
+@media (max-width: 600px){
+.maritalss {
+  width: 251px;
+}}
+
+@media (max-width: 753px){
+.maritalss {
+  width: 251px;
+}}
+@media (max-width: 540px){
+.qualifica {
+    width: 240px;
+}}
+
+@media (max-width:540px){
+    .createdbypro {
+    width: 200px;
+}
+}
+
+@media (max-width: 740px){
+.qualifica {
+    width: 240px;
+}}
+
+@media (max-width:740px){
+    .createdbypro {
+    width: 240px;
+}
+}

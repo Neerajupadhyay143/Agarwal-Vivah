@@ -1,0 +1,200 @@
+.gray-back {
+    padding: 20px 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    transition: 450ms;
+}
+
+
+.box {
+    box-shadow: 0 10px 10px #eee;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: 0.2s ease  !important;
+}
+.box:hover{
+    box-shadow:0 1px 1px ;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.row{
+        --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+#msform{
+        text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+#msform fieldset{
+        background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+.fs-title{
+        font-size: 20px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group >label {
+    font-size: 14px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    appearance: none;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E;
+}
+
+
+ .form-check-input {
+
+   display: block;
+    
+}
+#msform input{
+    padding: 0px 42px 0px 13px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+     box-sizing: border-box;
+    font-family: inherit;
+    color: #2C3E50;
+    font-size: 14px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+    outline: none;
+} 
+#msform .action-button {
+    width: 100px;
+    background: red;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+
+.form-check-inline {
+    display: inline-flex;
+    margin-right: 1rem;
+    column-gap: 5px;
+}
+ #msform select {
+    padding: 0px 8px 0px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #2C3E50;
+    font-size: 14px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+}
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+#custom-buttonb {
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+#custom-textt {
+    font-family: sans-serif;
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.form-group label{
+    font-size: 14px;
+}
+
+
+#bottom-footer {
+    background: #dcdcdc;
+    margin-top: 30px;
+    padding: 50px 0;
+}
+#bottom-footer h2 {
+    margin: 0;
+    padding: 0 0 15px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+#bottom-footer ul {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+#bottom-footer ul li a {    
+    color: #333;
+    line-height: 28px;
+}
+

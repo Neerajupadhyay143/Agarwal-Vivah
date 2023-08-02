@@ -1,0 +1,14 @@
+#footer {
+    background: #575757;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

@@ -1,0 +1,253 @@
+.gray-back {
+    padding: 20px 0;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+/* .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+} */
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.editprofilepic {
+    background-color: #ff7b00;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    padding-top: 2px;
+    margin-top: -19px;
+    margin-left: 239px;
+    position: absolute;
+}
+.editprofilepic a {
+    text-decoration: none;
+    color: white;
+}
+.home-cuple img {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 30px;
+}
+.sub-head {
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+}
+.newfor h3 span {
+    background-color: #dadada;
+    padding: 0px 7px 0px 7px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+        margin-top: 20px;
+    border-radius: 0.25rem;
+}
+.list-group-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+.profile-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-group .profile-icon {
+    margin-left: -10px;
+    margin-right: 15px;
+}
+.my-dtail {
+    color: black !important;
+    text-decoration: none !important;
+}
+.profile-listmid h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.profile-listmid p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 2px;
+}
+.fa-check-circle:before, .fa-circle-check:before {
+    content: "\f058";
+}
+.connect-link a.right-tick {
+    font-size: 30px;
+    color: #c50736;
+    text-align: center;
+    display: block;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+.connect-link a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #c50736;
+    text-align: center;
+    display: block;
+}
+.col-12{
+    
+    /* -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; */
+
+        position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+img {
+
+    vertical-align: middle;
+    border-style: none;
+}
+.img-fluid {
+    max-width: 100% !important;
+    height: auto !important;
+}
+h5{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.profile-head span {
+    color: #666;
+    font-size: 13px;
+}
+.profile-head {
+        margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mobile-verifid span img {
+    margin-left: 47px;
+}
+.mobile-verifid p a {
+    font-size: 14px;
+    color: red;
+    text-decoration: none;
+}
+.mobile-verifid {
+    margin-top: 5px;
+}
+.mobile-verifid span {
+    font-size: 14px;
+}
+.statics-bx span {
+    font-size: 50px;
+    color: #a4a4a4;
+    font-weight: 700;
+    width: 80px;
+    line-height: 58px;
+    text-align: center;
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+    margin-right: 15px;
+}
+.statics-bx {
+    background: #f0f0f0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #666;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    padding: 12px 15px;
+}
+.Improve a {
+    height: 80px;
+    border: 3px solid red;
+    color: red;
+    padding-top: 26px;
+}
+.Improve a:hover{
+    background-color: red;
+    color: white;
+    box-shadow: 0px 1px 4px 1px rgb(244, 148, 148) !important;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.sub-head {
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+}
+.Downloadb >a {
+    height: 50px;
+    padding-top: 11px !important;
+    color: red;
+    border: 3px solid red;
+}   
+.Downloadb >a:hover{
+    background-color: red !important;
+     box-shadow: 0px 1px 4px 1px rgb(244, 148, 148) !important;
+    color: white !important;
+}
+.viewall {
+    font-weight: 700;
+    text-align: center;
+    padding-left: 120px;
+    color: red;
+}
+@media only screen and(max-width: 1024px){
+.Downloadb { a {
+    height: 65px;
+    padding-top: 6px !important;
+}
+}
+}
+
+/* @media (max-width:300px) {
+    .editprofilepic {
+        margin-left:426px;
+    }
+    
+} */
+@media (max-width:400px) {
+    .editprofilepic {
+        margin-left:476px;
+    }
+    
+}
+
+@media only screen and (max-width: 414px){
+#lalitag-45 {
+    margin: 0px 0px;
+}
+}
+@media only screen and (min-width: 1200px){
+.col-xl-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}

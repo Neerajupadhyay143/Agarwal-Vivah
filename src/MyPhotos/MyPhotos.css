@@ -1,0 +1,46 @@
+@media (min-width: 992px){
+ .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}}
+
+.my-photop {
+    padding-top: 15px;
+}
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.tab-content>.active {
+    margin-top: 15px;
+}
+.up-my-photo {
+    text-align: center;
+}
+.click-upphoto {
+    background-color: #EEE;
+    margin: 0px 320px;
+    padding: 21px;
+    border: 1px solid #ffdcdc;
+}
+#custom-button {
+    padding: 5px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -6px;
+}
+.up-my-photo p {
+    padding: 30px 230px;
+}

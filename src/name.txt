@@ -1,0 +1,90 @@
+// acciunt
+
+  currentPage: "",
+    profileFor : "",
+    maritalStatus: "",
+    kundliMatch : "",
+    biodataFileName :"",
+
+// personalpage
+
+   fullName:"", 
+   gotra:"", 
+   dob:"", 
+   birthPlace:"",
+   birthTime:"",
+
+//personalinfo
+
+   currentLocation:"", 
+   willingToRelocate:"",
+   liveWithFamily:"",
+
+// careerinfo
+
+
+   highestQualification :"", 
+   collegeName:"", 
+   workStatus:"", 
+
+  // bodyInfo
+
+   height:"", 
+   weight:"",
+   bodyType:"",
+   complexion:"",
+
+  //personalDiet
+
+   diet:"", 
+   drink:"",
+   smoke:"", 
+   hobbies:"",
+   hasPet:"", 
+  
+
+  //familyDetails
+
+  fatherName, 
+  fatherJob, 
+  motherName, 
+  motherJob, 
+  brothersCount, 
+  sistersCount,
+  brotherName, 
+  brotherJob, 
+  marriedBrotherCount, 
+  unmarriedBrotherCount,
+  sisterName, 
+  sisterJob, 
+  marriedSisterCount, 
+  unmarriedSisterCount, 
+
+  //social bodyInfo
+
+  facebookLink:, 
+  facebookPrivacy, 
+  instagramLink, 
+  instagramPrivacy, 
+  linkedinLink, 
+  linkedinPrivacy, 
+  whatsappNo, 
+  whatsappPrivacy, 
+  contactNo, 
+  contactPrivacy, 
+
+  //personalPrefrence
+
+ city,
+ age, 
+ height, 
+ maritalStatus, 
+ excludedGotra, 
+ stateLivingIn, 
+ annualIncome, 
+
+  //succespage
+
+   expressText,
+   biodataFile, 
+   biodataFileName, 
