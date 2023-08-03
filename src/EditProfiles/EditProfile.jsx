@@ -1,79 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./EditProfile.css";
+import { Context } from "../App";
+import PartnerPref from "./PartnerPref";
 
 
 function EditProfile() {
+  const{state,setState}=useContext(Context)
   const[slider,setSlider]=useState(false);
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [age, setAge] = useState(21);
-  const [dateOfBirth, setDateOfBirth] = useState("01-Jan-2002");
-  const [maritalStatus, setMaritalStatus] = useState("Never Married");
-  const [height, setHeight] = useState("4' 5\" (134cm)");
-  const [grewUpIn, setGrewUpIn] = useState("India");
-  const [diet, setDiet] = useState("Non-Veg");
-  const [personalValues, setPersonalValues] = useState("Will tell you later");
-  const [sunSign, setSunSign] = useState("Capricorn");
-  const [bloodGroup, setBloodGroup] = useState("...");
-  const [healthInfo, setHealthInfo] = useState("Not Specified");
-  const [disability, setDisability] = useState("None");
-  const [religion, setReligion] = useState("Hindu");
-  const [community, setCommunity] = useState("Other");
-  const [subCommunity, setSubCommunity] = useState("Not Specified");
-  const [gothra, setGothra] = useState("Not Specified");
-  const [motherTongue, setMotherTongue] = useState("Hindi");
-  const [canSpeak, setCanSpeak] = useState("...");
-  const [manglik, setManglik] = useState("Don't Know");
-  const [timeOfBirth, setTimeOfBirth] = useState("...");
-  const [cityOfBirth, setCityOfBirth] = useState("...");
-  const [fatherStatus, setFatherStatus] = useState("...");
-  const [motherStatus, setMotherStatus] = useState("...");
-  const [familyLocation, setFamilyLocation] = useState(
-    "Jaipur, Rajasthan, India"
-  );
-  const [nativePlace, setNativePlace] = useState("Not Specified");
-  const [numberOfBrothers, setNumberOfBrothers] = useState("...");
-  const [numberOfSisters, setNumberOfSisters] = useState("...");
-  const [familyType, setFamilyType] = useState("Not Specified");
-  const [familyValues, setFamilyValues] = useState("Not Specified");
-  const [familyAffluence, setFamilyAffluence] = useState("...");
-  const [highestQualification, setHighestQualification] = useState(
-    "M.E / M.Tech - Engineering"
-  );
-  const [collegesAttended, setCollegesAttended] = useState("...");
-  const [annualIncome, setAnnualIncome] = useState("Upto INR 1 Lakh");
-  const [workingWith, setWorkingWith] = useState("Private Company");
-  const [workingAs, setWorkingAs] = useState("Not Specified");
-  const [employerName, setEmployerName] = useState("...");
-  const [currentResidence, setCurrentResidence] = useState("Other, India");
-  const [stateOfResidence, setStateOfResidence] = useState("Rajasthan");
-  const [residencyStatus, setResidencyStatus] = useState("Citizen");
-  const [zipCode, setZipCode] = useState("Not Specified");
-  const [mobile, setMobile] = useState('+91-7357592858');
-  const [contactPerson, setContactPerson] = useState('-');
-  const [relationship, setRelationship] = useState('-');
-  const [convenientTime, setConvenientTime] = useState('-');
-  const [displayOption, setDisplayOption] = useState(
-    'You have chosen to display your contact details to all premium members.'
-  );
-  
- const [ageRange, setAgeRange] = useState('18 to 21');
-const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)');
-
-  const [country, setCountry] = useState('India');
-  const [state, setState] = useState("Doesn't Matter");
-  const [city, setCity] = useState("Doesn't Matter");
-
-    const [education, setEducation] = useState("Doesn't Matter");
-  const [professionArea, setProfessionArea] = useState("Doesn't Matter");
-
-   const [profileCreatedBy, setProfileCreatedBy] = useState("Doesn't Matter");
   
 
-
-
-  const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-  };
+  // const handleFileChange = (e) => {
+  //   setSelectedFile(e.target.files[0]);
+  // };
 
   const toggleSlider=()=>{
     setSlider(true);  }
@@ -87,13 +25,13 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
               <div className="col-sm-3 col-xl-3 col-lg-3 col-md-12 profilepic-up">
                 <img src="founder.jpg" alt="Profile" />
                 <p className="mt20">
-                  <strong>99%</strong> Profile completed
+                  <strong>{state.aboutMyself.completedProfile}</strong> Profile completed
                 </p>
                 <input
                   type="file"
                   id="real-file"
                   hidden="hidden"
-                  onChange={handleFileChange}
+                  onChange={state.aboutMyself.handleFileChange}
                 />
                 <button
                   type="button"
@@ -102,7 +40,7 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                   Upload Photo
                 </button>
                 <span id="custom-text">
-                  {selectedFile ? selectedFile.name : "No file chosen, yet."}
+                  {state.aboutMyself.selectedFile ? state.aboutMyself.selectedFile.name : "No file chosen, yet."}
                 </span>
                 <br />
               </div>
@@ -111,34 +49,34 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                   className="profile-heada d-flex justify-content-between"
                   id="lalitgprop">
                   <h5>
-                    Lalit Gupta <img src="verified.svg" alt="Verified" />
+                    {state.aboutMyself.name}<img src="verified.svg" alt="Verified" />
                   </h5>
-                  <span>Profile ID: AV789</span>
+                  <span>{state.aboutMyself.profileID}</span>
                 </div>
                 <div className="row ageheight">
                   <div className="col-sm-6 col-lg-6 col-xl-6 Single">
                     <ul className="profile-shortlistaa">
                       <li>
-                        <strong>Age / Height</strong>: 21 / 4' 5"
+                        <strong>Age / Height</strong>: {state.aboutMyself.himselfage}
                       </li>
                       <li>
-                        <strong>Marital Status</strong>: Never Married
+                        <strong>Marital Status</strong>:{state.aboutMyself.himselfmaritalStatus}
                       </li>
                       <li>
-                        <strong>Posted by</strong>: Parent / Guardian
+                        <strong>Posted by</strong>: {state.aboutMyself.himselfPosted}
                       </li>
                     </ul>
                   </div>
                   <div className="col-sm-6 col-lg-6 col-xl-6">
                     <ul className="profile-shortlistaa">
                       <li>
-                        <strong>Religion / Community</strong>: Hindu, Other
+                        <strong>Religion / Community</strong>:{state.aboutMyself.himselfreligion}
                       </li>
                       <li>
-                        <strong>Location</strong>: Other
+                        <strong>Location</strong>: {state.aboutMyself.himselflocation}
                       </li>
                       <li>
-                        <strong>Mother Tongue</strong>: Hindi
+                        <strong>Mother Tongue</strong>: {state.aboutMyself.himselfmotherTongue}
                       </li>
                     </ul>
                   </div>
@@ -257,41 +195,41 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                     <div className="col-sm-6 col-lg-6 col-xl-6 Single">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Age</strong>: {age}
+                            <strong>Age</strong>: {state.aboutMyself.age}
                         </li>
                         <li>
-                          <strong>Date of Birth</strong>: {dateOfBirth}
+                            <strong>Date of Birth</strong>: {state.aboutMyself.dateOfBirth}
                         </li>
                         <li>
-                          <strong>Marital Status</strong>: {maritalStatus}
+                            <strong>Marital Status</strong>: {state.aboutMyself.maritalStatus}
                         </li>
                         <li>
-                          <strong>Height</strong>: {height}
+                            <strong>Height</strong>: {state.aboutMyself.height}
                         </li>
                         <li>
-                          <strong>Grew up in</strong>: {grewUpIn}
+                            <strong>Grew up in</strong>: {state.aboutMyself.grewUpIn}
                         </li>
                       </ul>
                     </div>
                     <div className="col-sm-6 col-lg-6 col-xl-6">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Diet</strong>: {diet}
+                            <strong>Diet</strong>: {state.aboutMyself.diet}
                         </li>
                         <li>
-                          <strong>Personal Values</strong>: {personalValues}
+                            <strong>Personal Values</strong>: {state.aboutMyself.personalValues}
                         </li>
                         <li>
-                          <strong>Sun sign</strong>: {sunSign}
+                            <strong>Sun sign</strong>: {state.aboutMyself.sunSign}
                         </li>
                         <li>
-                          <strong>Blood Group</strong>: {bloodGroup}
+                            <strong>Blood Group</strong>: {state.aboutMyself.bloodGroup}
                         </li>
                         <li>
-                          <strong>Health Information</strong>: {healthInfo}
+                            <strong>Health Information</strong>: {state.aboutMyself.healthInfo}
                         </li>
                         <li>
-                          <strong>Disability</strong>: {disability}
+                            <strong>Disability</strong>: {state.aboutMyself.disability}
                         </li>
                       </ul>
                     </div>
@@ -314,38 +252,38 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                     <div className="col-sm-6 col-lg-6 col-xl-6 Single">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Religion</strong>: {religion}
+                            <strong>Religion</strong>: {state.aboutMyself.religion}
                         </li>
                         <li>
-                          <strong>Community</strong>: {community}
+                            <strong>Community</strong>: {state.aboutMyself.community}
                         </li>
                         <li>
-                          <strong>Sub community</strong>: {subCommunity}
+                            <strong>Sub community</strong>: {state.aboutMyself.subCommunity}
                         </li>
                         <li>
-                          <strong>Gothra/Gothram</strong>: {gothra}
+                            <strong>Gothra/Gothram</strong>: {state.aboutMyself.gothra}
                         </li>
                         <li>
-                          <strong>Mother Tongue</strong>: {motherTongue}
+                            <strong>Mother Tongue</strong>: {state.aboutMyself.motherTongue}
                         </li>
                         <li>
-                          <strong>Can speak</strong>: {canSpeak}
+                            <strong>Can speak</strong>: {state.aboutMyself.canSpeak}
                         </li>
                       </ul>
                     </div>
                     <div className="col-sm-6 col-lg-6 col-xl-6">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Manglik/Chevvai dosham</strong>: {manglik}
+                            <strong>Manglik/Chevvai dosham</strong>: {state.aboutMyself.manglik}
                         </li>
                         <li>
-                          <strong>Date of Birth</strong>: {dateOfBirth}
+                            <strong>Date of Birth</strong>: {state.aboutMyself.dateOfBirth}
                         </li>
                         <li>
-                          <strong>Time of Birth</strong>: {timeOfBirth}
+                            <strong>Time of Birth</strong>: {state.aboutMyself.timeOfBirth}
                         </li>
                         <li>
-                          <strong>City of Birth</strong>: {cityOfBirth}
+                            <strong>City of Birth</strong>: {state.aboutMyself.cityOfBirth}
                         </li>
                       </ul>
                     </div>
@@ -360,35 +298,35 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                     <div className="col-sm-6 col-lg-6 col-xl-6 Single">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Father's Status</strong>: {fatherStatus}
+                            <strong>Father's Status</strong>: {state.aboutMyself.fatherStatus}
                         </li>
                         <li>
-                          <strong>Mother's Status</strong>: {motherStatus}
+                            <strong>Mother's Status</strong>: {state.aboutMyself.motherStatus}
                         </li>
                         <li>
-                          <strong>Family Location</strong>: {familyLocation}
+                            <strong>Family Location</strong>: {state.aboutMyself.familyLocation}
                         </li>
                         <li>
-                          <strong>Native Place</strong>: {nativePlace}
+                            <strong>Native Place</strong>: {state.aboutMyself.nativePlace}
                         </li>
                       </ul>
                     </div>
                     <div className="col-sm-6 col-lg-6 col-xl-6">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>No. of Brothers</strong>: {numberOfBrothers}
+                            <strong>No. of Brothers</strong>: {state.aboutMyself.numberOfBrothers}
                         </li>
                         <li>
-                          <strong>No. of Sisters</strong>: {numberOfSisters}
+                            <strong>No. of Sisters</strong>: {state.aboutMyself.numberOfSisters}
                         </li>
                         <li>
-                          <strong>Family Type</strong>: {familyType}
+                            <strong>Family Type</strong>: {state.aboutMyself.familyType}
                         </li>
                         <li>
-                          <strong>Family Values</strong>: {familyValues}
+                            <strong>Family Values</strong>: {state.aboutMyself.familyValues}
                         </li>
                         <li>
-                          <strong>Family Affluence</strong>: {familyAffluence}
+                            <strong>Family Affluence</strong>: {state.aboutMyself.familyAffluence}
                         </li>
                       </ul>
                     </div>
@@ -404,27 +342,27 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                       <ul className="profile-shortlistss">
                         <li>
                           <strong>Highest Qualification</strong>:
-                          {highestQualification}
+                            {state.aboutMyself.highestQualification}
                         </li>
                         <li>
                           <strong>College(s) Attended</strong>:
-                          {collegesAttended}
+                            {state.aboutMyself.collegesAttended}
                         </li>
                         <li>
-                          <strong>Annual Income</strong>: {annualIncome}
+                            <strong>Annual Income</strong>: {state.aboutMyself.annualIncome}
                         </li>
                       </ul>
                     </div>
                     <div className="col-sm-6 col-lg-6 col-xl-6">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Working With</strong>: {workingWith}
+                            <strong>Working With</strong>: {state.aboutMyself.workingWith}
                         </li>
                         <li>
-                          <strong>Working As</strong>: {workingAs}
+                            <strong>Working As</strong>: {state.aboutMyself.workingAs}
                         </li>
                         <li>
-                          <strong>Employer Name</strong>: {employerName}
+                            <strong>Employer Name</strong>: {state.aboutMyself.employerName}
                         </li>
                       </ul>
                     </div>
@@ -439,21 +377,21 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                     <div className="col-sm-6 col-lg-6 col-xl-6 Single">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Current Residence</strong>: {currentResidence}
+                            <strong>Current Residence</strong>: {state.aboutMyself.currentResidence}
                         </li>
                         <li>
                           <strong>State Of Residence</strong>:
-                          {stateOfResidence}
+                            {state.aboutMyself.stateOfResidence}
                         </li>
                       </ul>
                     </div>
                     <div className="col-sm-6 col-lg-6 col-xl-6">
                       <ul className="profile-shortlistss">
                         <li>
-                          <strong>Residency Status</strong>: {residencyStatus}
+                            <strong>Residency Status</strong>: {state.aboutMyself.residencyStatus}
                         </li>
                         <li>
-                          <strong>Zip / Pin code</strong>: {zipCode}
+                            <strong>Zip / Pin code</strong>: {state.aboutMyself.zipCode}
                         </li>
                       </ul>
                     </div>
@@ -475,96 +413,8 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
                 </div> */}
               </div>
                </>):(<>
-<div className="tab-pane fade show active " id="nav-partner" role="tabpanel" aria-labelledby="nav-partner-tab">
-  <h3 className="education">Basic Info<a href="#" className="btn btn-sm "><img src="editprofile.png"/> Edit</a></h3>
-   <div className="row ageheight">
-      <div className="col-sm-6 col-lg-6 col-xl-6 Single">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Age</strong>: {ageRange}
-          </li>
-          <li>
-            <strong>Height</strong>: {heightRange}
-          </li>
-          <li>
-            <strong>Religion / Community</strong>: {religion}
-          </li>
-        </ul>
-      </div>
-      <div className="col-sm-6 col-lg-6 col-xl-6">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Mother tongue</strong>: {motherTongue}
-          </li>
-          <li>
-            <strong>Marital Status:</strong> {maritalStatus}
-          </li>
-        </ul>
-      </div>
-    </div>
- <h3 className="education">Location Details<a href="#" className="btn btn-sm "><img src="editprofile.png"/> Edit</a></h3>
- <div className="row ageheight">
-      <div className="col-sm-6 col-lg-6 col-xl-6 Single">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Country living in</strong>: {country}
-          </li>
-          <li>
-            <strong>State living in</strong>: {state}
-          </li>
-          <li>
-            <strong>City / District</strong>: {city}
-          </li>
-        </ul>
-      </div>
-      <div className="col-sm-6 col-lg-6 col-xl-6">
-      
-      </div>
-    </div>
-                            <h3 className="education">Education & Career<a href="#" className="btn btn-sm "><img src="img/editprofile.png"/> Edit</a></h3>
-                             <div className="row ageheight">
-      <div className="col-sm-6 col-lg-6 col-xl-6 Single">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Education</strong>: {education}
-          </li>
-          <li>
-            <strong>Working with</strong>: {workingWith}
-          </li>
-          <li>
-            <strong>Profession area</strong>: {professionArea}
-          </li>
-        </ul>
-      </div>
-      <div className="col-sm-6 col-lg-6 col-xl-6">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Working as</strong>: {workingAs}
-          </li>
-          <li>
-            <strong>Annual income</strong>: {annualIncome}
-          </li>
-        </ul>
-      </div>
-    </div>
- <h3 className="education">Other Details<a href="#" className="btn btn-sm "><img src="img/editprofile.png"/> Edit</a></h3>
-  <div className="row ageheight">
-      <div className="col-sm-6 col-lg-6 col-xl-6 Single">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Profile created by</strong>: {profileCreatedBy}
-          </li>
-        </ul>
-      </div>
-      <div className="col-sm-6 col-lg-6 col-xl-6">
-        <ul className="profile-shortlistss">
-          <li>
-            <strong>Diet</strong>: {diet}
-          </li>
-        </ul>
-      </div>
-    </div>
-</div>
+               <PartnerPref/>
+
                </>)}
              
               <div className="My-Contact-detail">
@@ -579,19 +429,19 @@ const [heightRange, setHeightRange] = useState('4\' 5"(134cm) to 4\' 11"(149cm)'
       <div className="col-sm-6 col-lg-6 col-xl-6 Singlesa">
         <ul className="profile-shortlistss">
           <li>
-            <strong>Mobile</strong>: {mobile}
+                      <strong>Mobile</strong>: {state.aboutMyself.mobile}
           </li>
           <li>
-            <strong>Contact Person</strong>: {contactPerson}
+                      <strong>Contact Person</strong>: {state.aboutMyself.contactPerson}
           </li>
           <li>
-            <strong>Relationship with the member</strong>: {relationship}
+                      <strong>Relationship with the member</strong>: {state.aboutMyself.relationship}
           </li>
           <li>
-            <strong>Convenient Time to Call</strong>: {convenientTime}
+                      <strong>Convenient Time to Call</strong>: {state.aboutMyself.convenientTime}
           </li>
           <li>
-            <strong>Display Option</strong>: {displayOption}
+                      <strong>Display Option</strong>: {state.aboutMyself.displayOption}
           </li>
         </ul>
       </div>

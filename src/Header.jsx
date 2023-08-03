@@ -5,9 +5,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JS
 import Registration from "./Registration";
 import { Edit } from "@mui/icons-material";
 import EditProfile from "./ProfileNavbar/EditProfile";
+import LoginPage from "./Login Folder/LoginPage";
 
 const Header = () => {
   const[open,setOpen]=useState(false);
+  const[login,setLogin]=useState(false);
   // const {state} =useContext(Context)
 
 
@@ -17,6 +19,10 @@ const Header = () => {
   const handleRegistrationClick =()=>{
     setOpen(true);
    
+  }
+
+  const handleLoginClick =()=>{
+  setLogin(true);
   }
   //    useEffect(() => {
   //   const timer = setTimeout(() => {
@@ -30,6 +36,7 @@ const Header = () => {
   return (
     <>
       <div>
+        <LoginPage login={login} setLogin={setLogin}/>
     <Registration open={open} setOpen={setOpen}/>
         <header id="header">
           <nav className="navbar navbar-expand-lg">
@@ -71,7 +78,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" data-toggle="modal" href="#login">
+                    <a className="nav-link" data-toggle="modal" href="#login" onClick={handleLoginClick}>
                       Log In
                     </a>
                   </li>

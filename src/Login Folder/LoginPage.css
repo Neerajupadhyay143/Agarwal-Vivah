@@ -1,0 +1,14 @@
+.backgroundattatched{
+    padding-top:10px ;
+    overflow-y: hidden;
+    z-index: 1 !important;
+    height: 100vh !important;
+    transform: scale(1.04) !important ;
+    background: rgba(0, 0, 0, 0.5) !important;   
+    transition: 0.8s !important;
+    transition-duration: 0.9s !important;
+    transition-timing-function: ease !important; 
+}
+
+
+

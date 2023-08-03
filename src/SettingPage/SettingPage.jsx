@@ -3,8 +3,6 @@ import  "./SettingPage.css";
 import { Context } from '../App';
 
 function SettingPage() {
-  const [email, setEmail] = useState('kantmaniji@gmail.com');
-  const [password, setPassword] = useState('********');
   const [convert,Setconvert]=useState(true);
   const{state,setState}=useContext(Context);
 
@@ -30,7 +28,7 @@ function SettingPage() {
           <div className="Emaillist">Email</div>
           <ul>
             <li><label>Email</label></li>
-            <li>: {email}</li>
+            <li>: {state.Setting.email}</li>
             <li className="ml-auto"><a href="#">Edit</a></li>
           </ul>
         </div>
@@ -38,7 +36,7 @@ function SettingPage() {
           <div className="Passwordlist">Password</div>
           <ul>
             <li><label>Password</label></li>
-            <li>: {password}</li>
+            <li>: {state.Setting.password}</li>
             <li className="ml-auto"><a href="#">Edit</a></li>
           </ul>
         </div>

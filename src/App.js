@@ -8,7 +8,7 @@ import EditProfile from "./ProfileNavbar/EditProfile";
 export const Context = createContext();
 
 function App() {
-  
+
   const [state, setState] = useState({
     accountinfo: {
       profileFor: "", //done
@@ -67,7 +67,7 @@ function App() {
       facebookPrivacy: "",
       instagramLink: "",
       instagramPrivacy: "", //done
-      linkedinLink:"",
+      linkedinLink: "",
       linkedinPrivacy: "",
       whatsappNo: "",
       whatsappPrivacy: "",
@@ -88,30 +88,137 @@ function App() {
       biodataFile: "",
       biodataFileName: "",
     },
- Setting:{
-  email:"",
-  password:"",
-  convert:"",
- },
- searchInfo:{
-  age:"",
-  endAge:"",
-  startHeight:"",
-  endHeight:"",
-  maritalStatus:"",
-  childrenStatus:"",
-  selectedReligion:"",
-  selectedMotherTongue:"",
-  selectedCommunity:"",
-  selectedCountry:"",
-  visibleToAll:"",
-  protectedPhoto:"",
- }
+    Setting: {
+      email: "",
+      password: "",
+      convert: "",
+    },
+    searchInfo: {
+      age: "",
+      endAge: "",
+      startHeight: "",
+      endHeight: "",
+      maritalStatus: "",
+      childrenStatus: "",
+      selectedReligion: "",
+      selectedMotherTongue: "",
+      selectedCommunity: "",
+      selectedCountry: "",
+      visibleToAll: "",
+      protectedPhoto: "",
+    },
+    partnerPref: {
+      maritalStatus: "",
+      diet: "",
+      religion: "",
+      motherTongue: "",
+      ageRange: "12 to 180",
+      heightRange: "",
+      country: "",
+      states: "",
+      city: "",
+      education: "",
+      professionArea: "",
+      profileCreatedBy: "",
+      annualIncome: "",
+      workingWith: "",
+      workingAs: "",
+    },
+    aboutMyself: {
+
+      himselfage:"",
+      himselfmaritalStatus:"",
+      himselfPosted:"",
+      himselfreligion:"",
+      himselflocation:"",
+      himselfmotherTongue:"",
+      selectedFile:"",
+      electedFile: "",
+      completedProfile: "",
+      name: "",
+      rofileID: "",
+      age: "",
+      dateOfBirth: "",
+      maritalStatus: "",
+      height: "",
+      grewUpIn: "",
+      diet: "",
+      personalValues: "",
+      sunSign: "",
+      bloodGroup: "",
+      healthInfo: '',
+      disability: "",
+      religion: "",
+      communit: "",
+      subCommunity: "",
+      gothra: "",
+      motherTongue: "",
+      canSpeak: "",
+      manglik: "",
+      timeOfBirth: "",
+      cityOfBirth: "",
+      fatherStatus: "",
+      motherStatus: "",
+      familyLocation: "",
+      nativePlace: "",
+      numberOfBrothers: "",
+      numberOfSisters: "",
+      familyType: "",
+      familyValues: "",
+      familyAffluence: "",
+      highestQualification: "",
+      collegesAttended: "",
+      annualIncome: "",
+      workingWith: "",
+      workingAs: "",
+      employerName: "",
+      currentResidence: "",
+      stateOfResidence: "",
+      residencyStatus: "",
+      zipCode: "",
+      mobile: "",
+      contactPerson: "",
+      relationship: "",
+      convenientTime: "",
+      displayOption: "",
+
+
+    },
+    partnerProfile:{
+       age:"", 
+       height:"", 
+       maritalStatus:"", 
+       excludeGotra:"", 
+       stateLivingIn:"", 
+       qualification:"", 
+       workingWith:"", 
+       profession:"",
+       annualIncome:"",
+       profileCreatedBy:"",
+       diet:"", 
+    },
+    SubHomePage:{
+       pendingInvitations:"",
+       acceptedInvitations:"", 
+       recentVisitors:"",
+       contactsViewed:"", 
+       newMatches:"",
+       chatsInitiated:"", 
+       notifications:"",
+       name:"neeraj",
+       age:"21",
+       height:"5.3",
+       language:"hindi",
+       location:"jaipur",
+       profession:"develpoer",
+
+    }
+
   });
 
   return (
     <Context.Provider value={{ state, setState }}>
-      {/* <Header /> */}
+      <Header />
       <Home />
     </Context.Provider>
   );

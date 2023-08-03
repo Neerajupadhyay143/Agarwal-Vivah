@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./PartnerProfile.css";
+import { Context } from '../App';
 
 function PartnerProfile() {
+  const{state,setState}=useContext(Context)
     const [age, setAge] = useState('18 to 21');
   const [height, setHeight] = useState("4' 5'' to 4' 11''");
   const [maritalStatus, setMaritalStatus] = useState('Never Married');
@@ -30,7 +32,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{age}</a>
+            <a href="#">{state.partnerProfile.age}</a>
           </div>
         </div>
         <div>
@@ -47,7 +49,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{height}</a>
+                      <a href="#">{state.partnerProfile.height}</a>
           </div>
         </div>
         <div>
@@ -64,7 +66,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{maritalStatus}</a>
+                      <a href="#">{state.partnerProfile.maritalStatus}</a>
           </div>
         </div>
         <div>
@@ -81,7 +83,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{excludeGotra}</a>
+                      <a href="#">{state.partnerProfile.excludeGotra}</a>
           </div>
         </div>
         <div>
@@ -98,7 +100,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{stateLivingIn}</a>
+                      <a href="#">{state.partnerProfile.stateLivingIn}</a>
           </div>
         </div>
         <div>
@@ -115,7 +117,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{annualIncome}</a>
+                      <a href="#">{state.partnerProfile.annualIncome}</a>
           </div>
         </div>
         <div>
@@ -135,7 +137,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{qualification}</a>
+                      <a href="#">{state.partnerProfile.qualification}</a>
           </div>
         </div>
         <div>
@@ -152,7 +154,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{workingWith}</a>
+                      <a href="#">{state.partnerProfile.workingWith}</a>
           </div>
         </div>
         <div>
@@ -169,7 +171,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{profession}</a>
+                      <a href="#">{state.partnerProfile.profession}</a>
           </div>
         </div>
         <div>
@@ -186,7 +188,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{annualIncome}</a>
+                      <a href="#">{state.partnerProfile.annualIncome}</a>
           </div>
         </div>
         <div>
@@ -206,7 +208,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{profileCreatedBy}</a>
+                      <a href="#">{state.partnerProfile.profileCreatedBy}</a>
           </div>
         </div>
         <div>
@@ -223,7 +225,7 @@ function PartnerProfile() {
             </a>
           </div>
           <div className="openpartnerr">
-            <a href="#">{diet}</a>
+                      <a href="#">{state.partnerProfile.diet}</a>
           </div>
         </div>
         <div>

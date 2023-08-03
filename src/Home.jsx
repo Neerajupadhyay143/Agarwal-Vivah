@@ -11,6 +11,8 @@ import SubHomePage from "./Deshboard/SubHomePage";
 import EditProfile from "./EditProfiles/EditProfile";
 import SettingPage from "./SettingPage/SettingPage";
 import Search from "./Search Folder/Search";
+import PartnerProfile from "./PartnerProfile/PartnerProfile";
+import LoginPage from "./Login Folder/LoginPage";
 
 
 function Home({  currentPage, setCurrentPage }) {
@@ -20,10 +22,11 @@ function Home({  currentPage, setCurrentPage }) {
     setHomeView(true);
   };
 
-  return(!homeView=== true?(
+  return(homeView=== true?(
   <>
-<SubHomePage/>
-{/* <PartnerProfile/>   */}
+  {/* <LoginPage/> */}
+{/* <SubHomePage/> */}
+<PartnerProfile/>  
  {/* <SettingPage/> */}
 {/* <EditProfile/> */}
  {/* <Inbox/> */}

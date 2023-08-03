@@ -23,6 +23,7 @@ function Registration({ open, setOpen }) {
           aria-hidden="true"
           aria-labelledby="register-pop"
           tabIndex="-1">
+          <div className="backgroundattatched" >   
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
               <div className="modal-header">
@@ -143,6 +144,7 @@ function Registration({ open, setOpen }) {
               </div>
             </div>
           </div>
+        </div>
         </div>
       ) : null}
     </>
