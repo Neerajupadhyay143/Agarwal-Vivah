@@ -8,21 +8,21 @@ import EditProfile from "./ProfileNavbar/EditProfile";
 import LoginPage from "./Login Folder/LoginPage";
 
 const Header = () => {
-  const[open,setOpen]=useState(false);
-  const[login,setLogin]=useState(false);
+  const [open, setOpen] = useState(false);
+  const [login, setLogin] = useState(false);
   // const {state} =useContext(Context)
 
 
 
-  
 
-  const handleRegistrationClick =()=>{
+
+  const handleRegistrationClick = () => {
     setOpen(true);
-   
+
   }
 
-  const handleLoginClick =()=>{
-  setLogin(true);
+  const handleLoginClick = () => {
+    setLogin(true);
   }
   //    useEffect(() => {
   //   const timer = setTimeout(() => {
@@ -36,8 +36,8 @@ const Header = () => {
   return (
     <>
       <div>
-        <LoginPage login={login} setLogin={setLogin}/>
-    <Registration open={open} setOpen={setOpen}/>
+        <LoginPage login={login} setLogin={setLogin} />
+        <Registration open={open} setOpen={setOpen} />
         <header id="header">
           <nav className="navbar navbar-expand-lg">
             <div className="container">
@@ -83,7 +83,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" data-toggle="modal"  href="#" onClick={handleRegistrationClick} >
+                    <a className="nav-link" data-toggle="modal" href="#" onClick={handleRegistrationClick} >
                       Free Registration
                     </a>
                   </li>
@@ -144,7 +144,7 @@ const Header = () => {
           </nav>
         </header>
       </div>
-   
+
     </>
   );
 };
